@@ -7,10 +7,4 @@ services:
       context: .
     image: lfo/nodejs
     ports: 
-      - "9090"
-    networs:
-      - dev-network
-
-networks:
-  dev-network:
-    driver: bridge
+      - "8080"
