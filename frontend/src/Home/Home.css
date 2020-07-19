@@ -7,7 +7,7 @@ main {
 }
 
 section#leftMenu {
-    background: linear-gradient(#37ACCF, #2367A6);
+    background: linear-gradient(var(--light-blue), var(--dark-blue));
     grid-column-start: 1;
     grid-column-end: 2;
 }
