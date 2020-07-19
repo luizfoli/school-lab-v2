@@ -1,0 +1,22 @@
+main {
+    width: 100%;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-template-rows: 100%;
+}
+
+section#leftMenu {
+    background: linear-gradient(#37ACCF, #2367A6);
+    grid-column-start: 1;
+    grid-column-end: 2;
+}
+
+section#mainContent {
+    background-color: #fff;
+    grid-column-start: 2;
+    grid-column-end: 3;
+}
+
+
+
