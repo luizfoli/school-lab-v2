@@ -1,9 +1,15 @@
 import { Request, Response } from "express";
 
+
+
 const express = require('express');
-const morgan = require('morgan');
 const app = express();
 
+const helmet = require('helmet');
+const morgan = require('morgan');
+
+
+app.use(helmet());
 app.use(morgan('common'));
 
 const PORT = process.env.PORT || 8080;
