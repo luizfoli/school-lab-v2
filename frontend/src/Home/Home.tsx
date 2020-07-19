@@ -1,6 +1,7 @@
 import React from 'react';
 import './Home.css';
 
+import Header from '../MainContent/Header';
 
 function Home() {
 
@@ -10,6 +11,7 @@ function Home() {
       <section id="leftMenu">
       </section>
       <section id="mainContent">
+        <Header />
       </section>
     </main>
   );
