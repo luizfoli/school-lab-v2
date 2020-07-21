@@ -8,10 +8,6 @@ function SideMenu() {
     <nav>
 
       <ul>
-        <li>Alunos</li>
-        <li>Funcionários</li>
-        <li>
-          <SubjectIcon /> Materias</li>
       </ul>
     </nav>
   );
