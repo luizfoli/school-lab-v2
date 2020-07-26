@@ -1,7 +1,7 @@
 import express from 'express';
 import helmet from 'helmet';
 
-import StoreRoutes from './routes/store.routes';
+import SubjectRoutes from './routes/subject.routes';
 
 function App() {
 
@@ -9,7 +9,7 @@ function App() {
   this.app.use(helmet());
   this.app.use(express.json());
 
-  this.app.use(StoreRoutes);  
+  this.app.use(SubjectRoutes);  
 };
 
 export default new App().app;
