@@ -1,5 +1,5 @@
 import { Schema, model } from 'mongoose';
-import Class from './Classroom';
+import Classroom from './Classroom';
 
 export default model('student', new Schema({
   name: {
@@ -19,8 +19,8 @@ export default model('student', new Schema({
     required: true
   },
   classroom: {
-    type: Class,
-    required: true
+    type: Object,
+    required: false
   }
 },
   {
