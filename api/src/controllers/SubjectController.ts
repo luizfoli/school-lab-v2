@@ -2,7 +2,7 @@ import { Request, Response } from 'express';
 
 import Subject from '../models/Subject';
 
-function StoreController() {
+function SubjectController() {
 
   this.delete = async function (req: Request, res: Response) {
 
@@ -17,12 +17,12 @@ function StoreController() {
     const id = req.query.id;
 
     if (id) {
-      const store = await Subject.find({ _id: id });
-      return res.send({data: store})
+      const subject = await Subject.find({ _id: id });
+      return res.send({data: subject})
     }
 
-    const stores = await Subject.find();
-    return res.send({data: stores});
+    const subjects = await Subject.find();
+    return res.send({data: subjects});
   }
 
   this.post = async function(req: Request, res: Response) {
@@ -36,4 +36,4 @@ function StoreController() {
   }
 }
 
-export default new StoreController();
+export default new SubjectController();
