@@ -1,13 +1,13 @@
 import { Request, Response } from 'express';
 
-import Store from '../models/Store';
+import Subject from '../models/Subject';
 
 function StoreController() {
 
   this.delete = async function (req: Request, res: Response) {
 
     const id = req.query.id;
-    await Store.deleteOne({ _id: id });
+    await Subject.deleteOne({ _id: id });
 
     return res.send({ msg: `Store ${id} was deleted` });
   }
@@ -17,18 +17,18 @@ function StoreController() {
     const id = req.query.id;
 
     if (id) {
-      const store = await Store.find({ _id: id });
+      const store = await Subject.find({ _id: id });
       return res.send({data: store})
     }
 
-    const stores = await Store.find();
+    const stores = await Subject.find();
     return res.send({data: stores});
   }
 
   this.post = async function(req: Request, res: Response) {
 
     const { name } = req.body;
-    await Store.create({
+    await Subject.create({
       name
     });
 

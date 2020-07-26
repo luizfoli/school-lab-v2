@@ -1,5 +1,5 @@
 import express from 'express';
-import StoreController from '../controllers/StoreController';
+import StoreController from '../controllers/SubjectController';
 
 function StoreRoutes() {
   this.router = express.Router();
