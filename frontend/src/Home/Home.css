@@ -7,7 +7,7 @@ main {
 }
 
 section#leftMenu {
-    background: linear-gradient(#37ACCF, #2367A6);
+    background: linear-gradient(var(--light-blue), var(--dark-blue));
     grid-column-start: 1;
     grid-column-end: 2;
 }
@@ -18,5 +18,19 @@ section#mainContent {
     grid-column-end: 3;
 }
 
+header {
+    width: 100%;
+    padding: 20px 40px;
+
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+header img {
+    width: 50px;   
+    border-radius: 100px;    
+    margin: 0 10px; 
+}
 
 

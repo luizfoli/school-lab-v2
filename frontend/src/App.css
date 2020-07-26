@@ -1,3 +1,9 @@
+:root {
+  --light-blue: #37ACCF;
+  --dark-blue: #2367A6;
+}
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -6,4 +12,7 @@
 html, body {
   width: 100vw;
   height: 100vh;
+
+  font-family: Verdana, Geneva, Tahoma, sans-serif; 
+  font-weight: 200; 
 }
