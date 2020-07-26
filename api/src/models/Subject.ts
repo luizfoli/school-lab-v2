@@ -1,6 +1,6 @@
 import { Schema, model } from 'mongoose';
 
-export default model('store', new Schema({
+export default model('subject', new Schema({
   name: {
     type: String,
     required: true
