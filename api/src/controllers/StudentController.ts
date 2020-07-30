@@ -18,14 +18,14 @@ function StudentController() {
 
     if (id) {
       const student = await Student.find({ _id: id });
-      return res.send({data: student})
+      return res.send({ data: student })
     }
 
     const stores = await Student.find();
-    return res.send({data: stores});
+    return res.send({ data: stores });
   }
 
-  this.post = async function(req: Request, res: Response) {
+  this.post = async function (req: Request, res: Response) {
 
     const {
       name,
@@ -42,7 +42,7 @@ function StudentController() {
       classroom
     });
 
-    return res.send({msg: 'added'});
+    return res.send({ msg: 'added' });
   }
 
   this.put = async function (req: Request, res: Response) {
@@ -56,7 +56,18 @@ function StudentController() {
       classroom
     } = req.body;
 
-    const student = await Student.findById(id); 
+    await Student.findOneAndUpdate(Student.findById(id),
+      {
+        _id: id,
+        name,
+        birthdate,
+        document,
+        sex,
+        classroom
+      }
+    );
+
+    return res.send({ "msg": `The Student if id ${id} was updated` })
   }
 }
 
