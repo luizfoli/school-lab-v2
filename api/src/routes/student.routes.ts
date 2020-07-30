@@ -7,6 +7,7 @@ function StudentRoutes() {
   this.router.delete('/student', StudentController.delete);
   this.router.get('/student', StudentController.get);
   this.router.post('/student', StudentController.post);
+  this.router.put('/student', StudentController.put);
 }
 
 export default new StudentRoutes().router;
