@@ -44,6 +44,20 @@ function StudentController() {
 
     return res.send({msg: 'added'});
   }
+
+  this.put = async function (req: Request, res: Response) {
+
+    const {
+      id,
+      name,
+      birthdate,
+      document,
+      sex,
+      classroom
+    } = req.body;
+
+    const student = await Student.findById(id); 
+  }
 }
 
 export default new StudentController();
